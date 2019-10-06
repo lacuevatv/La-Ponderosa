@@ -15,20 +15,77 @@
 <div class="site-wrapper">
     <div class="site-inner">
         <header class="site-header">
-            <picture>
-                <source srcset="assets/images/logo-sup.svg" type="image/svg+xml">
-                <source srcset="assets/images/logo-sup.png 1x, assets/images/logo-sup@2x.png 2x" media="(min-width: 300px)">
-                <img src="assets/images/logo-sup.png" alt="Logo La Ponderosa">
-            </picture>
-            <h1>
+            <nav class="main-nav">
+                <div class="brand-name">
+                        <picture>
+                            <source srcset="assets/images/logo-sup.svg" type="image/svg+xml">
+                            <source srcset="assets/images/logo-sup.png 1x, assets/images/logo-sup@2x.png 2x" media="(min-width: 300px)">
+                            <img src="assets/images/logo-sup.png" alt="Logo La Ponderosa">
+                        </picture>
+                </div><!--//.brand-name-->
+                
+                <button class="toggle"></button>
+                
+                <ul class="main-menu">
+                    <li>
+                        <a href="#bienvenidos">
+                            Bienvenidos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#residencia">
+                            Residencia
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#galeria">
+                            Galería
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#servicios">
+                            Servicios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contacto">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="social-menu">
+                    <li>
+                        <a class="menu-facebook" href="" target="_blank">
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu-instagram" href="" target="_blank">
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav><!--//.main-nav-->
+
+            <div class="wrapper-slider-background">
+                <ul class="slider-content">
+                    <li>
+                        <img src="assets/images/slider/slider1.jpg">
+                    </li>
+                </ul>
+            </div><!--//.wrapper-slider-background-->
+
+            <h1 class="main-tittle">
                 residencia<br>
                 <strong>La Ponderosa</strong>
             </h1>
+
         </header><!--//.site-header-->
 
         <main role="main">
 
-            <section class="main-section">
+            <section id="residencia" class="main-section">
                 <h2>
                     RESIDENCIA
                 </h2>
@@ -115,11 +172,18 @@
                 </ul><!--//.detalles-->
             </section><!--//.details-section-->
 
-            <section class="photos-section">
-                <div style="height: 300px">fotos</div>
+            <section id="galeria" class="photos-section">
+                <div class="wrapper-galeria">
+                    <ul class="galeria">
+                        <li>
+                            <figure class="contenedor-foto lazy-load-image" data-img-mov="galeria1-mov.jpg" data-img-mov2x="galeria1.jpg" data-img="galeria1.jpg" data-img2x="galeria1@2x.jpg">
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
             </section><!--//.photos-section-->
 
-            <section class="services-section">
+            <section id="servicios" class="services-section">
                 <header>
                     <h2>
                         Servicios
@@ -264,7 +328,7 @@
 
         </main><!--//main-->
 
-        <footer class="site-footer">
+        <footer id="contacto" class="site-footer">
 
             <div class="widget-footer">
                 <figure>
