@@ -1,0 +1,95 @@
+.site-footer {
+    position: relative;
+    z-index: 11;    
+    padding: 70px $paddingLeftRight 10px;
+    border-bottom: 40px solid $color-negro;
+    @media (min-width: $md) {
+        padding: 100px $paddingLeftRightMD 100px;
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        @include align-items(center);
+        @include justify-content(space-between);
+    }
+}//.site-footer
+
+.widget-footer {
+    width: 100%;
+    padding: 10px;
+    @media (min-width: $md) {
+        width: calc(100% / 3);
+    }
+}
+
+.logo-footer {
+    width: 80%;
+    max-width: 234px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.contact-items {
+    font-size: 0.9rem;
+    text-align: center;
+    font-style: italic;
+    padding: 0 15px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    color: #606060;
+    @media (min-width: $md) {
+        font-size: 0.7rem;
+        margin: 0;
+    }
+
+    li {
+        margin: 30px 0 60px;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}//.contact-items
+
+.icons-footer {
+    display: block;
+    position: absolute;
+    width: 100%;
+    border-bottom: solid 1px rgba(0,0,0,0.6);
+    left: 0;
+    top: -25px;
+
+    .icon {
+        position: absolute;
+        display: block;
+        top: -20px;
+        left: 50%;
+        width: 70px;
+        background-color: $color-blanco;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 40px;
+        @include transform( translateX(-50%) );
+    }//.icon
+    
+    .icon-location {
+        background-image: url('../images/location.svg');
+        background-size: 30px 30px;
+    }
+    .icon-email {
+        background-image: url('../images/email.svg');
+        background-size: 30px 30px;
+    }
+    .icon-phone {
+        background-image: url('../images/ios-telephone.svg');
+        background-size: 30px 30px;
+    }
+}//.icons-footer
+
+.map-wrapper {
+    height: 100%;
+    width: 100%;
+}//.map-wrapper

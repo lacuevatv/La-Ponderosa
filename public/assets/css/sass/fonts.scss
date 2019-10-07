@@ -1,12 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
-
 @font-face {
-    font-family: 'Chesterpress Clean';
-    src: url('../fonts/chesterpress-clean.eot');
-    src: url('../fonts/chesterpress-clean.woff') format('woff'),
-        url('../fonts/chesterpress-clean.svg') format('svg'),
-        url('../fonts/chesterpress-clean.ttf') format('truetype');
+    font-family: 'Lora';
+    src: url('../fonts/lora-regular.eot');
+    src: url('../fonts/lora-regular.woff') format('woff'),
+        url('../fonts/lora-regular.svg') format('svg'),
+        url('../fonts/lora-regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/lora-regularitalic.eot');
+    src: url('../fonts/lora-regularitalic.woff') format('woff'),
+        url('../fonts/lora-regularitalic.svg') format('svg'),
+        url('../fonts/lora-regularitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/lora-bold.eot');
+    src: url('../fonts/lora-bold.woff') format('woff'),
+        url('../fonts/lora-bold.svg') format('svg'),
+        url('../fonts/lora-bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/lora-bolditalic.eot');
+    src: url('../fonts/lora-bolditalic.woff') format('woff'),
+        url('../fonts/lora-bolditalic.svg') format('svg'),
+        url('../fonts/lora-bolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
     font-display: swap;
 }
