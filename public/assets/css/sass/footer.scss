@@ -90,11 +90,15 @@
 }//.icons-footer
 
 .map-wrapper {
-    height: 100%;
+    height: 300px;
     width: 100%;
-    @media (min-width: $sm) {}
+    @media (min-width: $sm) {
+        height: 350px;
+    }
 
-    @media (min-width: $md) {}
+    @media (min-width: $md) {
+        height: 250px;
+    }
 
     @media (min-width: $lg) {
         height: 220px;
