@@ -692,6 +692,13 @@ html, body {
   font-size: 1.5rem;
   font-weight: 700;
 }
+.main-section .contenido p {
+  overflow: hidden;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+}
 .main-section .contenido .wrapper-button {
   margin-bottom: 30px;
   margin-top: 30px;
@@ -795,6 +802,9 @@ html, body {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+.details-section .inner-detalle .text-detalles {
+  overflow: hidden;
 }
 .details-section .inner-detalle .detalles-more-btn {
   cursor: pointer;

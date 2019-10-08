@@ -63,6 +63,11 @@
             font-weight: 700;
         }
 
+        p {
+            overflow: hidden;
+            @include transition(all $transitionSpeed);
+        }
+
         .wrapper-button {
             margin-bottom: 30px;
             margin-top: 30px;
@@ -162,6 +167,10 @@
             }
         }
 
+        .text-detalles {
+            overflow: hidden;
+        }
+
         .detalles-more-btn {
             cursor: pointer;
             letter-spacing: 1px;
@@ -195,10 +204,6 @@
     background-color: #e4e4e4;
     @media (min-width: $md) {
         padding: 100px $paddingLeftRightMD;
-    }
-
-    .wrapper-galeria {
-
     }
 
     .galeria {
