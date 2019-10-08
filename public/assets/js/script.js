@@ -4,14 +4,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('load', function() {
     console.log('all loaded');
+    initSlider();
 });
 
 function initSlider() {
     var slider = tns({
-        container: '.my-slider',
-        items: 3,
-        slideBy: 'page',
-        autoplay: true
+        container: '.slider-content',
+        items: 1,
+        slideBy: 1,
+        controls: false,
+        autoplay: true,
+        //autoWidth: true,
+        nav: true,
+        autoplayButtonOutput: false,
     });
 }
 
