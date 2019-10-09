@@ -805,6 +805,10 @@ html, body {
 }
 .details-section .inner-detalle .text-detalles {
   overflow: hidden;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
 }
 .details-section .inner-detalle .detalles-more-btn {
   cursor: pointer;
@@ -999,7 +1003,6 @@ html, body {
   .services-section .servicio {
     padding-bottom: 30px;
     margin: 0.5rem;
-    height: 100%;
   }
 }
 .services-section .servicio .header-servicio {
@@ -1144,7 +1147,7 @@ html, body {
   -ms-transition: all 500ms;
   transition: all 500ms;
   position: absolute;
-  bottom: 1rem;
+  bottom: 5px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);

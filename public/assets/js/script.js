@@ -2,6 +2,16 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Doc Ready');
     //reduce los textos
     hideElements();
+
+    var linksGoTos = document.querySelectorAll('.go-to');
+
+    for (var i = 0; i < linksGoTos.length; i++) {
+        
+        linksGoTos[i].addEventListener('click', function(){
+            smoothScroll( this.getAttribute('href') );
+        });
+        
+    }
 });
 
 window.addEventListener('load', function() {
@@ -73,15 +83,65 @@ function hideElements() {
 }
 
 function openServicio(el) {
-    console.log(el)
+    
+    var lista = el.previousElementSibling;
+    
+    if (el.getAttribute('aria-label') == 'Ver Más' ) {
+        
+        el.setAttribute('aria-label', 'Ver Menos');
+        el.style.transform = 'translateX(-50%) rotate(0)';
+        el.style.bottom = '16px';
+
+        lista.style.height = (lista.scrollHeight+30) + 'px';
+    } else {
+        el.setAttribute('aria-label', 'Ver Más');
+        el.style.transform = 'translateX(-50%) rotate(180deg)';
+        el.style.bottom = '5px';
+
+        lista.style.height = 0;
+    }
 }
 
 function openDetails(el) {
-    console.log(el)
+    var contenido = el.previousElementSibling;
+
+    if( el.getAttribute('title') == 'Leer Más' ) {
+        el.setAttribute('title', 'Leer Menos');
+        el.innerText = 'Leer Menos';
+        
+        contenido.style.height = contenido.scrollHeight + 'px';
+    } else {
+        el.setAttribute('title', 'Leer Más');
+        el.innerText = 'Leer más';  
+
+        contenido.style.height = 50 + 'px';
+    }
+
 }
 
 function openIntro() {
-    console.log('inicio')
+    var residenciaIntroParagraps = document.querySelector('#residencia').querySelectorAll('p');
+    var btnInicio = document.querySelector('#more-intro');
+
+    if ( btnInicio.innerText == 'Más') {
+
+        for (var index = 1; index < residenciaIntroParagraps.length; index++) {
+            residenciaIntroParagraps[index].style.height = residenciaIntroParagraps[index].scrollHeight + 'px';
+        }
+        //cambia título, texto, gira el icono
+        btnInicio.setAttribute('title', 'Menos');
+        btnInicio.querySelector('.more-title-btn').innerText = 'Menos';
+        btnInicio.querySelector('img').style.transform = 'translateY(-50%) rotate(180deg)';
+    } else {
+        for (var index = 1; index < residenciaIntroParagraps.length; index++) {
+            residenciaIntroParagraps[index].style.height = 0;
+        }
+        //cambia título, texto, gira el icono
+        btnInicio.setAttribute('title', 'Más');
+        btnInicio.querySelector('.more-title-btn').innerText = 'Más';
+        btnInicio.querySelector('img').style.transform = 'translateY(-50%) rotate(0)';
+    
+    }
 }
 
 //inicia el slider
@@ -154,4 +214,55 @@ function lazyLoadImgs() {
             imagen.innerHTML = html;
         }//else
     }//for
+}
+
+function smoothScroll(eID) {
+
+    //toma la posicion del elemento, el cual debe pasarse para que sea uno solo por queryselector: '.clase', '#id', 'tag'
+    function elmYPosition(eID) {
+        var elm = document.querySelector(eID);
+        var y = elm.offsetTop;
+        var node = elm;
+        while (node.offsetParent && node.offsetParent != document.body) {
+            node = node.offsetParent;
+            y += node.offsetTop;
+        }
+        return y;
+    }
+    
+    //toma la posicion actual de la ventana
+    function currentYPosition() {
+        // Firefox, Chrome, Opera, Safari
+        if (self.pageYOffset) return self.pageYOffset;
+        // Internet Explorer 6 - standards mode
+        if (document.documentElement && document.documentElement.scrollTop)
+            return document.documentElement.scrollTop;
+        // Internet Explorer 6, 7 and 8
+        if (document.body.scrollTop) return document.body.scrollTop;
+        return 0;
+    }
+
+
+    //smoth scroll
+    var startY = currentYPosition();
+    var stopY = elmYPosition(eID);
+    var distance = stopY > startY ? stopY - startY : startY - stopY;
+    if (distance < 100) {
+        scrollTo(0, stopY); return;
+    }
+    var speed = Math.round(distance / 100);
+    if (speed >= 20) speed = 20;
+    var step = Math.round(distance / 25);
+    var leapY = stopY > startY ? startY + step : startY - step;
+    var timer = 0;
+    if (stopY > startY) {
+        for ( var i=startY; i<stopY; i+=step ) {
+            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+            leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+        } return;
+    }
+    for ( var i=startY; i>stopY; i-=step ) {
+        setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+        leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+    }
 }
