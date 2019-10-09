@@ -613,7 +613,203 @@ html, body {
 8.0 NAV
 --------------------------------------------------------------*/
 .main-nav {
+  position: absolute;
+  z-index: 111;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  padding: 0 10px;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+}
+@media (min-width: 992px) {
+  .main-nav {
+    height: 117px;
+    padding: 0 8%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.41+0,0+100 */
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.41) 0%, rgba(0, 0, 0, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.41) 0%, rgba(0, 0, 0, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.41) 0%, rgba(0, 0, 0, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#69000000", endColorstr="#00000000",GradientType=0 );
+    /* IE6-9 */
+  }
+}
+@media (min-width: 1600px) {
+  .main-nav {
+    padding: 0 11%;
+  }
+}
+.main-nav .brand-name {
+  width: 100px;
+  max-width: 300px;
+}
+@media (min-width: 992px) {
+  .main-nav .brand-name {
+    width: 10%;
+  }
+}
+.main-nav .brand-name img {
+  width: 100%;
+  height: auto;
+}
+.main-nav .main-menu {
+  opacity: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  padding: 0 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+}
+@media (min-width: 992px) {
+  .main-nav .main-menu {
+    opacity: 1;
+    padding: 0;
+    overflow: visible;
+    height: auto;
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: auto;
+    position: static;
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    justify-content: flex-end;
+    -webkit-flex-grow: 1;
+    -moz-flex-grow: 1;
+    -ms-flex-grow: 1;
+    -o-flex-grow: 1;
+    flex-grow: 1;
+    margin-right: 6%;
+  }
+}
+@media (min-width: 1600px) {
+  .main-nav .main-menu {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 992px) {
+  .main-nav .main-menu li {
+    margin-right: 1rem;
+  }
+}
+.main-nav .main-menu a {
+  display: block;
+  cursor: pointer;
+  padding: 0.7rem 2rem;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .main-nav .main-menu a {
+    text-align: initial;
+    padding: 0;
+  }
+}
+.main-nav .main-menu a:hover {
+  opacity: 0.7;
+}
+.main-nav .social-menu {
   display: none;
+}
+@media (min-width: 992px) {
+  .main-nav .social-menu {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+  }
+}
+.main-nav .social-menu li {
+  margin: 0 0.3rem;
+}
+.main-nav .menu-social, .main-nav .menu-instagram, .main-nav .menu-facebook {
+  cursor: pointer;
+  display: block;
+  padding: 0.5rem;
+  height: 22px;
+  width: 22px;
+  background-repeat: no-repeat;
+}
+.main-nav .menu-social:hover, .main-nav .menu-instagram:hover, .main-nav .menu-facebook:hover {
+  opacity: 0.7;
+}
+.main-nav .menu-facebook {
+  background-image: url("../images/icon-face.svg");
+  background-size: 18px 22px;
+}
+.main-nav .menu-instagram {
+  background-image: url("../images/social-instagram.svg");
+  background-size: 22px 22px;
+}
+.main-nav .toggle {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  z-index: 1;
+  top: -4px;
+}
+@media (min-width: 992px) {
+  .main-nav .toggle {
+    display: none;
+  }
+}
+.main-nav .toggle .tog, .main-nav .toggle .tog3, .main-nav .toggle .tog2, .main-nav .toggle .tog1 {
+  opacity: 1;
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  display: block;
+  left: 5%;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+}
+.main-nav .toggle .tog1 {
+  top: 15%;
+}
+.main-nav .toggle .tog2 {
+  top: 45%;
+}
+.main-nav .toggle .tog3 {
+  top: 75%;
 }
 
 /*--------------------------------------------------------------

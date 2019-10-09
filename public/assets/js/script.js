@@ -1,17 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Doc Ready');
+    
     //reduce los textos
     hideElements();
 
+    //smothscroll on menu links
     var linksGoTos = document.querySelectorAll('.go-to');
 
     for (var i = 0; i < linksGoTos.length; i++) {
         
         linksGoTos[i].addEventListener('click', function(){
+            if ( window.innerWidth < 992 ) {
+                //si es movil, ademas de ir al link cierra el menu
+                toggleMenu();
+            }
             smoothScroll( this.getAttribute('href') );
         });
         
     }
+
+    //activa el menu
+    document.querySelector('#toggle').addEventListener('click', function(){
+        toggleMenu();
+    });
+
 });
 
 window.addEventListener('load', function() {
@@ -80,6 +91,34 @@ function hideElements() {
         });
     }
     
+}
+
+function toggleMenu() {
+    var btnToggle = document.querySelector('#toggle'),
+        menu = document.querySelector('.main-menu'),
+        nav = document.querySelector('.main-nav');
+
+    if ( menu.classList.contains('active') ) {
+        //cierra menu
+        btnToggle.classList.remove('active');
+        menu.classList.remove('active');
+        menu.style.height = 0;
+        menu.style.paddingTop = 0;
+        menu.style.paddingBottom = 0;
+        menu.style.opacity = '0';
+        nav.style.backgroundColor = 'rgba(0,0,0,0.2)';
+        
+    } else {
+        //abre menu
+        btnToggle.classList.add('active');
+        menu.classList.add('active');
+        menu.style.opacity = '1';
+        menu.style.paddingTop = '50px';
+        menu.style.paddingBottom = '50px';
+        menu.style.height = (menu.scrollHeight+100) + 'px';
+        nav.style.backgroundColor = 'rgba(0,0,0,0.5)';
+    }
+
 }
 
 function openServicio(el) {
