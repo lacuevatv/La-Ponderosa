@@ -80,13 +80,25 @@
         <div class="wrapper-slider-background">
             <ul class="slider-content">
                 <li>
-                    <img class="imagen-slider" src="assets/images/slider/slider1.jpg">
+                    <picture>
+                        <source srcset="assets/images/slider/slider1.jpg" media="(min-width: 768px)">
+                        <source srcset="assets/images/slider/slider1-mov.jpg" media="(min-width: 300px)">
+                        <img class="imagen-slider" src="assets/images/slider/slider1.jpg">
+                    </picture>
                 </li>
                 <li>
-                    <img class="imagen-slider" src="assets/images/slider/slider1.jpg">
+                    <picture>
+                        <source srcset="assets/images/slider/slider2.jpg" media="(min-width: 768px)">
+                        <source srcset="assets/images/slider/slider2-mov.jpg" media="(min-width: 300px)">
+                        <img class="imagen-slider" src="assets/images/slider/slider2.jpg">
+                    </picture>
                 </li>
                 <li>
-                    <img class="imagen-slider" src="assets/images/slider/slider1.jpg">
+                    <picture>
+                        <source srcset="assets/images/slider/slider3.jpg" media="(min-width: 768px)">
+                        <source srcset="assets/images/slider/slider3-mov.jpg" media="(min-width: 300px)">
+                        <img class="imagen-slider" src="assets/images/slider/slider3.jpg">
+                    </picture>
                 </li>
             </ul>
         </div><!--//.wrapper-slider-background-->
