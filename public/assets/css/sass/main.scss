@@ -464,6 +464,7 @@
             background-image: url('../images/arrow-black.svg');
             background-size: 20px 20px;
             @include transition(all $transitionSpeed);
+            background-repeat: no-repeat;
             position: absolute;
             bottom: 5px;
             left: 50%;

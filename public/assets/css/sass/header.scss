@@ -23,7 +23,7 @@
     .front-header {
         position: relative;
         z-index: 11;
-        padding: 100px $paddingLeftRight;
+        padding: 90px $paddingLeftRight;
         display: flex;
         display: -o-flex;
         display: -ms-flex;
@@ -34,7 +34,7 @@
         @include flex-direction(column);
 
         @media (min-width: $xs) {
-            padding: 70px $paddingLeftRight;
+            padding: 40px $paddingLeftRight;
         }
         @media (min-width: $sm) {
             padding: 80px $paddingLeftRight;
@@ -48,7 +48,7 @@
         color: $color-blanco;
         text-align: center;
         padding: 1rem 0 2rem;
-        font-size: 3rem;
+        font-size: 2.7rem;
         line-height: 3rem;
         @media (min-width: $md) {
             font-size: 5rem;

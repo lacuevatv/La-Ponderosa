@@ -499,7 +499,7 @@ html, body {
 .site-header .front-header {
   position: relative;
   z-index: 11;
-  padding: 100px 10px;
+  padding: 90px 10px;
   display: flex;
   display: -o-flex;
   display: -ms-flex;
@@ -520,7 +520,7 @@ html, body {
 }
 @media (min-width: 565px) {
   .site-header .front-header {
-    padding: 70px 10px;
+    padding: 40px 10px;
   }
 }
 @media (min-width: 768px) {
@@ -537,7 +537,7 @@ html, body {
   color: #fff;
   text-align: center;
   padding: 1rem 0 2rem;
-  font-size: 3rem;
+  font-size: 2.7rem;
   line-height: 3rem;
 }
 @media (min-width: 992px) {
@@ -1342,6 +1342,7 @@ html, body {
   -moz-transition: all 500ms;
   -ms-transition: all 500ms;
   transition: all 500ms;
+  background-repeat: no-repeat;
   position: absolute;
   bottom: 5px;
   left: 50%;
