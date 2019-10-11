@@ -323,7 +323,7 @@ button {
 --------------------------------------------------------------*/
 html, body {
   font-family: "Lora", sans-serif;
-  color: #333;
+  color: #666;
   background-color: #fff;
   font-size: 100%;
   line-height: 150%;
@@ -337,7 +337,7 @@ html, body {
   position: relative;
   z-index: 11;
   padding: 70px 10px 10px;
-  border-bottom: 40px solid #333;
+  border-bottom: 40px solid #666;
 }
 @media (min-width: 992px) {
   .site-footer {
@@ -858,6 +858,7 @@ html, body {
   position: relative;
   font-size: 2rem;
   font-weight: 700;
+  color: #000;
   line-height: 2.5rem;
 }
 @media (min-width: 992px) {
@@ -1000,6 +1001,7 @@ html, body {
   transform: translateX(-50%);
 }
 .details-section .inner-detalle .text-detalles {
+  text-align: center;
   overflow: hidden;
   -webkit-transition: all 500ms;
   -moz-transition: all 500ms;
@@ -1151,7 +1153,7 @@ html, body {
   left: 10px;
   width: 50px;
   height: 3px;
-  background-color: #333;
+  background-color: #666;
 }
 @media (min-width: 992px) {
   .services-section .title-servicios h2:before {
@@ -1191,7 +1193,7 @@ html, body {
 }
 .services-section .servicio {
   background-color: #fff;
-  border-bottom: 10px solid #333;
+  border-bottom: 10px solid #666;
   padding-bottom: 50px;
   position: relative;
 }
@@ -1334,10 +1336,11 @@ html, body {
   cursor: pointer;
   margin: 20px auto 0;
   display: block;
-  width: 20px;
+  width: 100%;
   height: 20px;
   background-image: url("../images/arrow-black.svg");
   background-size: 20px 20px;
+  background-position: center;
   -webkit-transition: all 500ms;
   -moz-transition: all 500ms;
   -ms-transition: all 500ms;
@@ -1345,11 +1348,6 @@ html, body {
   background-repeat: no-repeat;
   position: absolute;
   bottom: 5px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
 }
 .services-section .servicio .service-btn:hover {
   opacity: 0.8;

@@ -84,7 +84,7 @@ function hideElements() {
     }
     for (var b = 0; b < textDetalles.length; b++) {
         btnServicios[b].setAttribute('aria-label', 'Ver Más');
-        btnServicios[b].style.transform = 'translateX(-50%) rotate(180deg)';
+        btnServicios[b].style.transform = 'rotate(180deg)';
 
         btnServicios[b].addEventListener('click', function(){
             openServicio(this);
@@ -128,13 +128,13 @@ function openServicio(el) {
     if (el.getAttribute('aria-label') == 'Ver Más' ) {
         
         el.setAttribute('aria-label', 'Ver Menos');
-        el.style.transform = 'translateX(-50%) rotate(0)';
+        el.style.transform = 'rotate(0)';
         el.style.bottom = '16px';
 
         lista.style.height = (lista.scrollHeight+30) + 'px';
     } else {
         el.setAttribute('aria-label', 'Ver Más');
-        el.style.transform = 'translateX(-50%) rotate(180deg)';
+        el.style.transform = 'rotate(180deg)';
         el.style.bottom = '5px';
 
         lista.style.height = 0;
