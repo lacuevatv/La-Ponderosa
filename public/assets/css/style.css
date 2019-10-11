@@ -1333,6 +1333,7 @@ html, body {
   margin-bottom: 10px;
 }
 .services-section .servicio .service-btn {
+  outline: none;
   cursor: pointer;
   margin: 20px auto 0;
   display: block;
