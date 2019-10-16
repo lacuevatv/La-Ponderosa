@@ -23,7 +23,7 @@
     .front-header {
         position: relative;
         z-index: 11;
-        padding: 90px $paddingLeftRight;
+        padding: 60px $paddingLeftRight;
         display: flex;
         display: -o-flex;
         display: -ms-flex;
@@ -34,7 +34,7 @@
         @include flex-direction(column);
 
         @media (min-width: $xs) {
-            padding: 40px $paddingLeftRight;
+            padding: 60px $paddingLeftRight;
         }
         @media (min-width: $sm) {
             padding: 80px $paddingLeftRight;
@@ -78,7 +78,7 @@
         overflow: hidden;
 
         .imagen-slider {
-            width:250%;
+            width:110%;
             height: auto;
             @media (min-width: $xs) {
                 width:100%;

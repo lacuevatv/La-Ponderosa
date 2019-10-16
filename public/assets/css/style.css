@@ -499,7 +499,7 @@ html, body {
 .site-header .front-header {
   position: relative;
   z-index: 11;
-  padding: 90px 10px;
+  padding: 60px 10px;
   display: flex;
   display: -o-flex;
   display: -ms-flex;
@@ -520,7 +520,7 @@ html, body {
 }
 @media (min-width: 565px) {
   .site-header .front-header {
-    padding: 40px 10px;
+    padding: 60px 10px;
   }
 }
 @media (min-width: 768px) {
@@ -566,7 +566,7 @@ html, body {
   overflow: hidden;
 }
 .site-header .wrapper-slider-background .imagen-slider {
-  width: 250%;
+  width: 110%;
   height: auto;
 }
 @media (min-width: 565px) {
