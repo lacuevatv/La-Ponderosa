@@ -1308,7 +1308,6 @@ html, body {
   line-height: 1.8rem;
   color: #8c8c8c;
   font-style: italic;
-  font-weight: 700;
   padding: 0 10px;
   -webkit-transition: all 500ms;
   -moz-transition: all 500ms;
@@ -1323,7 +1322,7 @@ html, body {
 }
 .services-section .servicio .lista-servicio li {
   width: 100%;
-  margin: 10px auto;
+  margin: 12px auto;
   text-align: center;
 }
 .services-section .servicio .lista-servicio li:first-child {
